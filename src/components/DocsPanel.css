@@ -1,0 +1,151 @@
+.docs-panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.5rem;
+}
+
+.docs-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.docs-tabs button {
+  flex: 1;
+  padding: 0.6rem;
+  border: 1px solid #0f3460;
+  background: transparent;
+  color: #aaa;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.2s;
+}
+
+.docs-tabs button.active {
+  background: #533483;
+  color: white;
+  border-color: #533483;
+}
+
+.docs-content {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.section-intro {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #0f3460;
+  border-radius: 6px;
+  border-left: 3px solid #e94560;
+}
+
+.section-intro p {
+  margin: 0;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.theory-item,
+.syntax-item,
+.example-item {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #0f1419;
+  border-radius: 8px;
+  border: 1px solid #0f3460;
+  transition: all 0.2s;
+}
+
+.theory-item:hover,
+.syntax-item:hover,
+.example-item:hover {
+  border-color: #533483;
+  transform: translateX(2px);
+}
+
+.theory-item h3,
+.syntax-item h3,
+.example-item h3 {
+  margin: 0 0 0.5rem 0;
+  color: #e94560;
+  font-size: 1rem;
+}
+
+.theory-item p,
+.syntax-item p,
+.example-item p {
+  margin: 0 0 0.75rem 0;
+  color: #aaa;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.theory-example,
+.syntax-example,
+.example-code {
+  display: block;
+  padding: 0.75rem;
+  background: #16213e;
+  border-radius: 4px;
+  color: #4ec9b0;
+  font-size: 0.8rem;
+  font-family: 'Monaco', monospace;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.example-code {
+  white-space: pre;
+  word-break: normal;
+}
+
+.docs-footer {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #0f3460;
+}
+
+.external-link {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  background: #0f3460;
+  color: #e94560;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+  width: 100%;
+  text-align: center;
+}
+
+.external-link:hover {
+  background: #533483;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(83, 52, 131, 0.3);
+}
+
+/* Scrollbar for docs content */
+.docs-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.docs-content::-webkit-scrollbar-track {
+  background: #0f3460;
+  border-radius: 3px;
+}
+
+.docs-content::-webkit-scrollbar-thumb {
+  background: #533483;
+  border-radius: 3px;
+}
+
+.docs-content::-webkit-scrollbar-thumb:hover {
+  background: #6b4298;
+}
